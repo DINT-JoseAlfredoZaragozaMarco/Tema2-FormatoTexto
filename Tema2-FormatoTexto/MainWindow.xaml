@@ -1,0 +1,22 @@
+﻿<Window x:Class="Tema2_FormatoTexto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema2_FormatoTexto"
+        mc:Ignorable="d"
+        Icon="./assets/icon.png"
+        Title="Texto con formato" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="119,97,0,0" TextWrapping="Wrap" Text="Texto" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="inputTextBox" HorizontalAlignment="Left" Margin="21,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249" Height="131" FontSize="18" TextChanged="TextBox_TextChanged" BorderBrush="Black"/>
+        <CheckBox x:Name="negritaCheckBox" Content="Negrita" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Checked="EstiloCheckBox_Checked" Click="CheckBox_Click"/>
+        <CheckBox x:Name="cursivaCheckBox" Content="Cursiva" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" FontSize="18" FontStyle="Italic" Checked="EstiloCheckBox_Checked" Click="CheckBox_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="595,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontStyle="Italic" Height="27"><Run Language="es-es" Text="Color de texto"/><LineBreak/><Run Language="es-es"/></TextBlock>
+        <RadioButton x:Name="azulRadioButton" Content="Azul" HorizontalAlignment="Left" Margin="632,152,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Foreground="#FF0419C8" FontSize="18" FontWeight="Bold" GroupName="colores"/>
+        <RadioButton x:Name="rojoRadioButton" Content="Rojo" HorizontalAlignment="Left" Margin="632,194,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Foreground="#FFC80404" FontSize="18" FontWeight="Bold" GroupName="colores"/>
+        <RadioButton x:Name="verdeRadioButton" Content="Verde" HorizontalAlignment="Left" Margin="632,234,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Foreground="#FF13C804" FontSize="18" FontWeight="Bold" GroupName="colores"/>
+        <TextBox x:Name="resultadoTextBox" HorizontalAlignment="Left" Margin="119,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="569" Height="81" FontSize="20" Background="#FFE6C15C" Foreground="Black" TextAlignment="Center"/>
+
+    </Grid>
+</Window>
