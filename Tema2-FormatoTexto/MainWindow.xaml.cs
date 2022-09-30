@@ -23,27 +23,27 @@ namespace Tema2_FormatoTexto
         public MainWindow()
         {
             InitializeComponent();
-            resultadoTextBox.IsReadOnly = true;
+            azulRadioButton.IsChecked = true;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            resultadoTextBox.Text = inputTextBox.Text;
+            resultadoTextoBlock.Text = inputTextBox.Text;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             if(rojoRadioButton.IsChecked == true)
             {
-                resultadoTextBox.Foreground = Brushes.Red;
+                resultadoTextoBlock.Foreground = Brushes.Red;
             }
             else if(azulRadioButton.IsChecked == true)
             {
-                resultadoTextBox.Foreground = Brushes.Blue;
+                resultadoTextoBlock.Foreground = Brushes.Blue;
             }
             else if(verdeRadioButton.IsChecked == true)
             {
-                resultadoTextBox.Foreground = Brushes.Green;
+                resultadoTextoBlock.Foreground = Brushes.Green;
             }
         }
 
@@ -51,11 +51,11 @@ namespace Tema2_FormatoTexto
         {
             if(negritaCheckBox.IsChecked == true)
             {
-                resultadoTextBox.FontWeight = FontWeights.Bold;
+                resultadoTextoBlock.FontWeight = FontWeights.Bold;
             }
             if(cursivaCheckBox.IsChecked == true)
             {
-                resultadoTextBox.FontStyle = FontStyles.Italic;
+                resultadoTextoBlock.FontStyle = FontStyles.Italic;
             }
         }
 
@@ -63,11 +63,11 @@ namespace Tema2_FormatoTexto
         {
             if (negritaCheckBox.IsChecked == false)
             {
-                resultadoTextBox.FontWeight = FontWeights.Normal;
+                resultadoTextoBlock.FontWeight = FontWeights.Normal;
             }
             if (cursivaCheckBox.IsChecked == false)
             {
-                resultadoTextBox.FontStyle = FontStyles.Normal;
+                resultadoTextoBlock.FontStyle = FontStyles.Normal;
             }
         }
     }
